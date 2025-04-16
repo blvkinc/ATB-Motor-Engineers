@@ -1,30 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Flame, Shield, Star, Wrench } from 'lucide-react';
+import { Shield, Wrench, Sparkles, Settings } from 'lucide-react';
 import Layout from '../components/Layout';
 import ServiceHeader from '../components/ServiceHeader';
 
 export default function WeldingService() {
   const benefits = [
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Structural Integrity",
-      description: "Our welding repairs restore and often exceed original strength specifications for your vehicle's safety."
+      icon: <Shield className="w-6 h-6" />,
+      title: "Maintains Structural Integrity",
+      description: "Chassis or body damage can compromise your vehicle's safety. Expert welding repairs reinforce the structure and bring it back to spec."
     },
     {
-      icon: <Star className="w-8 h-8" />,
-      title: "Expert Craftsmanship",
-      description: "Skilled welders with years of experience in automotive welding techniques."
+      icon: <Wrench className="w-6 h-6" />,
+      title: "Boosts Durability",
+      description: "Strong, clean welds protect against future rust and wear, giving your vehicle long-term resilience on the road."
     },
     {
-      icon: <Flame className="w-8 h-8" />,
-      title: "Advanced Equipment",
-      description: "State-of-the-art welding equipment for precise, clean, and durable repairs."
+      icon: <Sparkles className="w-6 h-6" />,
+      title: "Enhances Visual Appeal",
+      description: "Well-executed welding leaves a neat finish that blends seamlessly with the rest of your vehicle, maintaining or improving its look."
     },
     {
-      icon: <Wrench className="w-8 h-8" />,
-      title: "Custom Solutions",
-      description: "From standard repairs to custom fabrication, we handle all your welding needs."
+      icon: <Settings className="w-6 h-6" />,
+      title: "Enables Custom Work",
+      description: "Whether you're modifying for style, performance, or utility, welding makes tailored solutions possible."
     }
   ];
 
@@ -32,32 +32,36 @@ export default function WeldingService() {
     <Layout>
       <ServiceHeader
         title="Welding Services"
-        description="Professional Car Welding in Derby"
+        description="The Importance of Professional Car Welding – And Why ATB Motor Engineers Is the Right Choice"
         image="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80"
       />
 
       {/* Main Content */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
+      <div className="max-w-6xl mx-auto px-4 py-20">
+        <div className="space-y-16">
+          {/* Introduction Section */}
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-effect rounded-2xl p-8 mb-16"
+            className="glass-effect rounded-2xl p-8"
           >
             <div className="space-y-6 text-gray-300">
               <p className="text-lg">
-                Quality welding is essential for maintaining your vehicle's structural integrity and safety. Whether it's repairing rust damage, fixing exhaust systems, or custom fabrication work, our expert welders deliver precise, durable results.
+                When it comes to keeping your vehicle safe and structurally sound, expert welding is essential. From repairing corroded panels and damaged chassis sections to custom fabrication work, quality welding ensures strength, safety, and long-lasting results. At ATB Motor Engineers, our skilled in-house welders deliver precise, high-standard welding services designed to restore and enhance your vehicle with care and expertise.
               </p>
+              <h3 className="text-2xl font-bold text-gradient-automotive mb-4">
+                Why Expert Car Welding Matters
+              </h3>
               <p className="text-lg">
-                At ATB Motor Engineers, we combine traditional welding expertise with modern techniques and equipment to provide superior welding services for all types of vehicles.
+                Welding is more than just metalwork—it plays a key role in preserving your vehicle's performance, safety, and lifespan. Here's why professional welding is so important:
               </p>
             </div>
-          </motion.div>
+          </motion.section>
 
           {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -65,38 +69,34 @@ export default function WeldingService() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="automotive-glass-effect rounded-xl p-6 group hover:border-blue-500/30 transition-all duration-300"
               >
-                <div className="card group relative overflow-hidden h-full">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-gray-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="relative z-10">
-                    <div className="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
-                      {benefit.icon}
-                    </div>
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-400">{benefit.description}</p>
-                  </div>
+                <div className="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
+                  {benefit.icon}
                 </div>
+                <h3 className="text-xl font-bold mb-2 text-blue-400 group-hover:text-blue-300 transition-colors">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-400">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
 
           {/* Why Choose Us */}
-          <motion.div
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-effect rounded-2xl p-8 mt-16"
+            className="glass-effect rounded-2xl p-8"
           >
-            <h2 className="text-3xl font-bold mb-6 text-gradient-automotive">Why Choose ATB Motor Engineers?</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gradient-automotive">Why Choose ATB Motor Engineers for Welding Services?</h2>
             <p className="text-lg text-gray-300">
-              Our welding team brings years of experience and certification to every job. We use advanced MIG and TIG welding equipment, ensuring strong, clean welds that meet or exceed industry standards. From structural repairs to custom fabrication, we deliver quality results you can trust.
+              At ATB Motor Engineers, we take pride in the quality of our welding work. Whether it's structural repairs, rust restoration, or custom fabrication, our technicians use precision tools and expert techniques to get the job done right. With a strong focus on safety, reliability, and attention to detail, you can trust us to handle your vehicle as if it were our own.
             </p>
-          </motion.div>
+          </motion.section>
         </div>
-      </section>
+      </div>
     </Layout>
   );
 }
