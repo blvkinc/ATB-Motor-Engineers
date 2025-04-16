@@ -1,0 +1,13 @@
+Logo Instructions:
+
+1. Create or download a logo image and save it as "logo.png"
+2. Place the logo.png file in this public directory
+3. The logo should ideally be:
+   - Square shaped (recommended dimensions: 512x512 pixels)
+   - Have a transparent background
+   - Include automotive imagery that represents ATB Motor Engineers
+   - Use colors that match the blue/purple theme of the website
+
+Once added to the public directory, the logo will automatically be used throughout the website.
+
+Note: Until you add a custom logo, you may see missing image icons where the logo should appear. 
