@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronLeft, Gauge } from 'lucide-react';
+import { Gauge } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface ServiceHeaderProps {
@@ -37,22 +36,6 @@ export default function ServiceHeader({ title, description, image }: ServiceHead
         <div className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent top-1/3 opacity-50"></div>
         <div className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent bottom-1/3 opacity-50"></div>
       </div>
-      
-      {/* Back button with enhanced styling */}
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="absolute top-32 left-6 z-20"
-      >
-        <Link 
-          to="/" 
-          className="flex items-center backdrop-blur-sm px-4 py-2 rounded-full border border-white/10 bg-black/20 hover:bg-blue-500/20 transition-all duration-300 group"
-        >
-          <ChevronLeft className="w-5 h-5 mr-2 text-blue-400 group-hover:text-white transition-colors" />
-          <span className="text-white/90 group-hover:text-white transition-colors">Back to Home</span>
-        </Link>
-      </motion.div>
 
       {/* Content with staggered animation */}
       <div className="relative z-10 px-4 max-w-5xl mx-auto">
