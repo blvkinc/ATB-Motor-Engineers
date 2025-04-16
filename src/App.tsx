@@ -10,10 +10,12 @@ import TimingBelt from './pages/TimingBelt';
 import Welding from './pages/WeldingService';
 import MechanicalRepairs from './pages/MechanicalRepairs';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
